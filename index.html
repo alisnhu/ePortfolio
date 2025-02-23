@@ -117,6 +117,37 @@
                 margin-right: auto;
             }
         }
+        .image-container {
+            max-width: 40%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .image-container > img {
+            width: 100%;
+            height: auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .section {
+            margin: 20px;
+        }
+        .section-title {
+            margin-bottom: 10px;
+        }
+        .list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .list-item {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -170,6 +201,7 @@
         
         <hr style="width: 100%; color: #737272; margin-top: 20px; margin-bottom: 20px;"/>
         <h2>Artifact and Enhancements</h2>
+        <div class="image-container"><img src="pageresource/app image.png" ></div>
         <p>
             This artifact is a simple inventory tracking application developed as part of the CS-360 Mobile Architecture and Development course. 
             The application allows users to create different inventories, track the stock of products within these inventories, 
@@ -181,6 +213,206 @@
              Taking into account situations such as the lack of an internet connection or users not wanting to send their data to an online database, 
              I decided to adapt the application to a hybrid architecture that supports both online and offline database functionality.
         </p>
+
+        <a href="" target="_blank">Open Original Artifact in Github</a>
+
+        <h3>Project Development Phases</h3>
+        <ol>
+            <li><b>Online Database Design: </b>Creating a MySQL database that aligns with the architectural structure.</li>
+            <li><b>REST Web Service Creation:</b> A RESTful web service was developed to act as a middleware layer between the client application and the database.</li>
+            <li><b>Mobile Application Re-coding: </b>The backend code of the old application was not compatible with the new architecture, so the application was re-coded from scratch.</li>
+        </ol>
+        <br/><br/>
+        <h3>Why This Project? (Skills Narrative)</h3>
+        <p>
+            <b>Reason 1:</b> This project is an application that I designed and developed entirely on my own, not based on pre-existing code provided in the course. 
+            Additionally, it required the development of not only a mobile application but also a web service, making it a comprehensive project where 
+            I can showcase the best practices of software engineering. <a href="" target="_blank" >To get Milestone 2 click</a>
+        </p>
+        <p>
+            <b>Reason 2: </b>The project involves a complex structure, where even the simplest tasks contain various branches.
+             This situation will highlight my algorithm development and coding skills. While Java is used in the application, 
+             the web service side includes PHP and structures that handle different data types (Resource, List, ArrayList, Map, Object, Stream, primitive data types). 
+             This demonstrates my proficiency with various data structures.<a href="" target="_blank" >To get Milestone 3 click</a>
+        </p>
+        <p>
+            <b> Reason 3: </b>The project incorporates both local and online databases. 
+            The Android mobile application and web service work as modules that process data between these two databases. 
+            This structure provides an opportunity to showcase my skills in database management topics such as data consistency, synchronization, and migration processes. 
+            It also demonstrates my SQL proficiency through the inclusion of DDL, DML, DQL, TCL, and DCL queries.<a href="" target="_blank" >To get Milestone 4 click</a>
+        </p>
+        <br/><br/>
+        <p>
+            Considering these three reasons, 
+            this project was chosen as it meets the three core skills we were required to demonstrate during the course 
+            (architectural design, algorithm development, and data management).
+        </p>
+        <br/><br/>
+
+        <h3>Project Phases:</h3>
+        <ol>
+            <li>
+                <h4>Architectural Design Creation</h4><br/>
+                <p>The necessary architectural documents, diagrams (architectural schemas, algorithms, sequence diagrams, database diagrams, etc.), and the requirements 
+                list were prepared during this phase. In the architectural design process, the need for a web service was identified. 
+                Although the MySQL database structure is suitable for network-based operation, distributing database credentials to each client poses a security risk.</p> 
+                <div style="max-width: 70%; margin: 0 auto;"><img style="width: 100%; height: auto;" src="pageresource/architecture error.png" ></div>
+                <p>Therefore, in line with the approach commonly used in modern systems, it was decided to place a middleware layer between the database and the client. 
+                This middleware stores the database credentials within itself, allowing only authorized users to perform the designated actions.</p>
+                <div style="max-width: 70%; margin: 0 auto;"><img style="width: 100%; height: auto;" src="pageresource/architecture.png" ></div>
+            </li>
+            <li>
+                <br/>
+                <h4>Code Analysis</h4>
+                <a href="" target="_blank">Click for code analysis video</a>
+                <p>
+                    The existing project code was thoroughly examined, and sections that were compatible and incompatible with the architectural structure were identified. 
+                    Based on this, necessary changes were planned.
+                </p>
+            </li>
+            <li>
+                <h4>Online Database Configuration</h4>
+                <a href="" target="_blank">Open in Github</a>
+                <p>An online database was created and configured according to the established architectural structure.</p>
+            </li>
+            <li>
+                <h4>Web Service Development</h4>
+                <a href="" target="_blank">Open in Github</a>
+                <p>
+                    The web service, which would act as middleware, was developed using PHP programming language and the REST architecture. 
+                    The reason PHP was chosen is that it offers rapid development due to its flexible structure and provides a secure infrastructure. 
+                    The REST architecture, compared to SOAP, offers a simpler and more effective development process.
+                </p>
+            </li>
+            <li>
+                <h4>Application Development</h4>
+                <a href="" target="_blank">Open in Github</a>
+                <p>
+                    The backend code of the application was redesigned to be compatible with the new architecture. 
+                    A RestHelper class was created to perform REST operations. The DbHelper and RestHelper classes were integrated to be used together as needed.
+                </p>
+            </li>
+        </ol>
+
+        <hr style="width: 100%; color: #737272; margin-top: 20px; margin-bottom: 20px;"/>
+        <h2>Course Outcomes:</h2>
+        <p>
+            In the initial phase of the project, the architectural work and the charts created strengthen communication at the organizational level. 
+            In an organization, there can be stakeholders from different disciplines. The best way to communicate with these individuals is by using a common language. 
+            The charts developed and standardized for this purpose ensure that each stakeholder has information about the project. 
+            This addresses the second course outcome. Additionally, these charts and the generated requirements document enable all stakeholders to stay informed about the project,
+             ensuring their active participation in decision-making processes. This creates a collaborative environment, which corresponds to the first course outcome.
+        </p>
+        <p>
+            The core architectural template (service-oriented integration) and algorithms developed for complex structures 
+            (such as locking mechanisms) demonstrate the ability to find algorithmic solutions to complex problems and follow industry best practices, 
+            thereby fulfilling the third course outcome.
+        </p>
+        <p>
+            Throughout the project, two different programming languages (Java and PHP), two different databases (SQLite and MySQL/MariaDB), 
+            and two different technologies (REST API and Android SDK) were used. The use of all these technical skills and tools within the same project proves that 
+            I am a Full Stack Developer. This supports my career goals in project architecture and development team leadership, fulfilling the fourth course outcome.
+        </p>
+        <p>
+            Upon reviewing the project, it can be observed that since the local section can be bypassed, 
+            most of the security was shifted to the front end. In this development, the following standards and principles were considered:
+            <p>
+                <b>Standards:</b>
+                <ol>
+                    <li>Filtering of user input data: Prevented vulnerabilities such as Remote Code Execution, SQL Injection, and XSS (Cross-Site Scripting).</li>
+                    <li>Filtering of output data: Prevented potential data leaks or background processes from revealing information about data handling.</li>
+                    <li>
+                         Data type checks: Values like numeric, string, and boolean (e.g., isNumeric) were checked. This helped prevent issues like integer overflow and memory overflow,
+                         making the system secure against DOS attacks.
+                    </li>
+                </ol>
+
+            </p>
+            <p>
+                <b>Principles:</b>
+                <ol>
+                    <li> Credential Security: A web service layer was created, connecting without distributing database credentials.</li>
+                    <li>Minimal Design Principle: Only core libraries were used, reducing the attack surface for hackers and creating a more secure structure.</li>
+                    <li>Authorization: With this session system, users were subjected to strict authorization controls regarding what actions they could perform.</li>
+                    <li>Authentication: A session control structure was established, and each action was checked, implementing an active authentication system.</li>
+                    <li>
+                        Deny Default: All actions and states were considered, and users were provided with a single path. 
+                        By default, all paths were denied, and only the allowed actions were permitted. This created a more robust system by limiting unauthorized access.
+                    </li>
+                </ol>
+
+            </p>
+            The above information clearly shows how the system's security was ensured and how a security-focused mindset was developed, fulfilling the fifth course outcom
+        </p>
+
+       
+
+
+        <h3 class="header">Resources</h1>
+
+            <div class="section">
+                <h4 class="section-title">Code Review</h2>
+                <a href="" target="_blank">Open on Youtube</a>
+            </div>
+            <div class="section">
+                <h4 class="section-title">Original Artifact</h2>
+                <a href="" target="_blank">Go to Github Repositiry</a>
+            </div>
+    
+        <div class="section">
+            <h4 class="section-title">Enhanced Artifact</h2>
+            <ul class="list">
+                <li class="list-item">1. MySQL Database : 
+                    <a href="" target="_blank">Go to Github Repositiry</a>
+                </li>
+                <li class="list-item">2. Web Service : 
+                <a href="" target="_blank">Go to Github Repositiry</a>
+                </li>
+                <li class="list-item">3. Enhanced App : 
+                    <a href="" target="_blank">Go to Github Repositiry</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h4 class="section-title">Design</h2>
+            <ul class="list">
+                <li class="list-item">1. Chart : 
+                    <a href="" target="_blank">Go to Github Repositiry</a>
+                </li>
+                <li class="list-item">2. Requirements : 
+                    <a href="" target="_blank">Go to Github Repositiry</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h4 class="section-title">Milestones</h2>
+                
+            <a href="" target="_blank">Go to Github Repositiry</a>
+            <ul class="list">
+                <li class="list-item">1. Milestone 2</li>
+                <li class="list-item">2. Milestone 3</li>
+                <li class="list-item">3. Milestone 4</li>
+            </ul>
+        </div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
