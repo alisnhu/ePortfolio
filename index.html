@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sayfası</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        ol > li::marker {
+        font-weight: bold;
+        }
+        body
+        {
+            background-color: #f0ebeb;
+        }
+        .gradient-banner
+        {
+
+            background-image: linear-gradient(to right bottom, #a4179a, #b90087, #c80073, #d2005f, #d7004a, #d92b39, #d74328, #d25816, #ca740b, #c08c15, #b5a12d, #a9b44a);
+        }
+        .deneme
+        {
+            font-family: "Montserrat", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+
+
+        }
+        .deneme2
+        {
+            font-family: "Montserrat", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+
+        }
+        .custom-button {
+        
+            background-color: #adadad !important;
+            color: gray;
+            border: solid 2px grey;
+            border-radius: 10px !important;
+            border-color: #fff;
+            opacity: 0.5;
+            transition: opacity 0.4s;
+        }
+        .custom-button:hover {
+            
+            background-color: #fff !important;
+            color: grey;
+            opacity: 0.6;
+            transition: opacity 0.4s;
+        }
+        .footer-content
+        {
+            width:60%;
+            margin: 0 auto;
+        }
+        .custom-footer {
+            color: #737272;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .content
+        {
+            color: #737272;
+            text-align: justify;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /* Geniş ekran (large) */
+        @media (min-width: 992px) {
+            .custom-footer {
+                width: 65%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .content
+            {
+                width: 65%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        /* Orta ekran (medium) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .custom-footer {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .content
+            {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        /* Küçük ekran (small) */
+        @media (max-width: 767px) {
+            .custom-footer {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .content
+            {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="gradient-banner bg-primary text-white text-center py-5">
+        <h1 class="deneme">Ali ARSLAN</h1>
+        <h5 class="deneme2">CS-499 Computer Science Capstone<br/>
+        ePortfolio Hybrid Stock Tracking App </h5>
+        <button type="button" class="custom-button btn btn-secondary">Check Github</button>
+    </header>
+    
+    <div class="content">
+        <h3>Professional Self-Assessment</h3>
+        <p>
+            Hello, I'm Ali Arslan. I've been writing code for 25 years and have been working professionally in the technology and IT sector for approximately 18 years. 
+            I started programming when I coincidentally came across a Basic programming language book. 
+            Over time, this interest evolved into different programming languages and competencies.</p>
+        <p>
+            Throughout my career, I've served in many different positions from software developer to project architect, from team leader to secure software development.
+            In all these roles, I had the opportunity to work with large teams in line with customer and project requirements. 
+            These experiences greatly strengthened my collaborative working competency. I have a particular interest in secure communication and image processing.
+         </p>
+         <p>
+            My computer engineering education spans many years. I first received my associate degree in computer programming, and then through Turkey's central examination system, 
+            I was placed in computer engineering four times and industrial engineering once. However, due to work intensity and attendance requirements, 
+            I couldn't complete my education. In 2024, I decided to complete this education. I had nearly a year available, and I focused this period on my education. 
+            By taking an average of four courses each semester, which is twice the normal course load, I'm approaching completion of my education in just over a year. 
+            My ultimate goal is to continue my academic career by being accepted into a doctoral program. Therefore, this education carries great importance for me.
+            A large portion of the courses I took consisted of either subjects I had taken in my previous education or knowledge I had directly acquired in industry. 
+            Therefore, despite being an intensive process, I didn't experience major difficulties. Nevertheless, I'm very happy to have had the opportunity to learn valuable information and 
+            meet many experts in various fields throughout the educational process.
+        </p>
+        <p>
+            This ePortfolio will not only showcase my technical knowledge and skills by making improvements to an existing project but will also demonstrate how 
+            I applied these competencies in the projects I developed. The portfolio presents my qualifications in the following three main categories
+        </p>
+        <br/>
+        <ol>
+            <li>Software Design and Engineering</li>
+            <li>Algorithms and Data Structures</li>
+            <li>Databases</li>
+        </ol> 
+          <br/>
+          <p>In addition to these three main categories, I will also demonstrate to what extent the project I developed within my portfolio meets the following course outcomes:</p>
+          <ol>
+            <li>Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science.  </li>
+            <li>Design, develop, and deliver professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts.</li>
+            <li>Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution while managing the trade-offs involved in design choices.  </li>
+            <li>Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.</li>
+            <li>Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.</li>
+        </ol>
+        
+        <hr style="width: 100%; color: #737272; margin-top: 20px; margin-bottom: 20px;"/>
+        <h2>Artifact and Enhancements</h2>
+        <p>
+            This artifact is a simple inventory tracking application developed as part of the CS-360 Mobile Architecture and Development course. 
+            The application allows users to create different inventories, track the stock of products within these inventories, 
+            and send SMS notifications both at the inventory level and for individual products.
+        </p>
+        <p>
+            During the course, the application was developed to work with a local SQLite database.
+             However, I aimed to connect it to an online MySQL database to allow access to the data from anywhere. 
+             Taking into account situations such as the lack of an internet connection or users not wanting to send their data to an online database, 
+             I decided to adapt the application to a hybrid architecture that supports both online and offline database functionality.
+        </p>
+
+
+
+
+
+
+
+
+
+    </div>
+    <footer class="custom-footer">
+        <hr style="width: 100%; color: #737272;"/>
+        <p>&copy; 2025 Ali ARSLAN. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
