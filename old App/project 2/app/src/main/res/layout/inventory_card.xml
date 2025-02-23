@@ -1,0 +1,36 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginBottom="16dp"
+    cardview:cardElevation="2dp"
+    cardview:cardBackgroundColor="#4962C6"
+    cardview:cardCornerRadius="8dp"
+    android:clickable="true"
+    android:onClick="openStockPage"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/inventoryItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_error"
+            android:visibility="visible"
+            android:id="@+id/errorIcon2"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

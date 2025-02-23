@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4962C6"
+    android:padding="16dp">
+
+    <!-- Logo ImageView -->
+    <ImageView
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Company Name TextView -->
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Inventory"
+        android:textSize="50sp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:fontFamily="@font/logo"/>
+
+    <!-- White Background LinearLayout -->
+    <LinearLayout
+        android:id="@+id/whiteBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:padding="16dp"
+        android:layout_below="@id/company"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inventories"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#4962C6"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+    </LinearLayout>
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/whiteBackground"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#4962C6"
+        android:text="Add new inventory"
+        android:textSize="16dp"
+        android:padding="10dp"/>
+</RelativeLayout>

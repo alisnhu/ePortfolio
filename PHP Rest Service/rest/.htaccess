@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# Önce HTTP metodunu değiştir
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{HTTP:X-HTTP-Method-Override} ^(PUT|PATCH|DELETE)$
+RewriteRule .* - [E=REQUEST_METHOD:%1]
+
+
+SetEnvIf X-HTTP-Method-Override PATCH REQUEST_METHOD=PATCH
+SetEnvIf X-HTTP-Method-Override PUT REQUEST_METHOD=PUT
+SetEnvIf X-HTTP-Method-Override DELETE REQUEST_METHOD=DELETE
+
+RewriteBase /rest/
+
+
+
+# Statik dosyaları yönlendirmeden muaf tut
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^.*\.(css|jpeg|gif|png|js|ico)$ [NC]
+
+
+
+# Dinamik istekleri index.php'ye yönlendir
+RewriteRule ^(.*)/?$ index.php?url=$1 [QSA,L]
